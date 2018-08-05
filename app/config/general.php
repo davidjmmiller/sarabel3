@@ -1,5 +1,3 @@
 <?php
 
-$g_config = [
-
-];
+$config['lang'] = 'es';
