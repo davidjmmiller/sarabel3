@@ -1,6 +1,6 @@
 <?php
 
-$g_routes = [
+$config['routes'] = [
     '' => 'welcome',
     'welcome' => 'welcome',
 ];

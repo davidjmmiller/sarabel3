@@ -13,15 +13,17 @@ require PATH_CONFIG.'general.php';
 require PATH_CONFIG.'routes.php';
 require PATH_CONFIG.'database.php';
 
-if (isset($_GET['q'])) {
-    if (isset($g_routes[$_GET['q']])) {
-        $g_controller = $_GET['q'];
-    } else {
-        $g_controller = 'page_not_found';
-    }
-}
-else {
-    $g_controller = 'welcome';
+// Loading libraries
+require PATH_LIBS.'utils.php';
+require PATH_LIBS.'database.php';
+
+
+// Loading routes
+$current_path = (isset($_GET['q']) ? $_GET['q'] : '');
+if (isset($config['routes'][$current_path])) {
+    $g_controller = $config['routes'][$current_path];
+} else {
+    $g_controller = 'page_not_found';
 }
 
 
