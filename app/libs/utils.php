@@ -8,5 +8,5 @@ function dd($var){
 
 function t($key) {
   global $lang;
-  return $lang[$_SESSION['lang']][$key];
+  return $lang[$_COOKIE['lang']][$key];
 }

@@ -20,21 +20,21 @@ require PATH_LIBS.'utils.php';
 require PATH_LIBS.'database.php';
 
 // Determine current language
-if (!isset($_SESSION['lang'])){
-    $_SESSION['lang'] = $config['lang'];
+if (!isset($_COOKIE['lang'])){
+    $_COOKIE['lang'] = $config['lang'];
 }
 
 // User select the current language
 if (isset($_GET['lang'])){
     switch($_GET['lang']){
         case 'en':
-            $_SESSION['lang'] = 'en';
+            $_COOKIE['lang'] = 'en';
         break;
         case 'es':
-            $_SESSION['lang'] = 'es';
+            $_COOKIE['lang'] = 'es';
         break;
         default:
-            $_SESSION['lang'] = $config['lang'];
+            $_COOKIE['lang'] = $config['lang'];
     }
 }
 
