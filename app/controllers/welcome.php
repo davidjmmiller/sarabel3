@@ -1,7 +1,8 @@
 <?php
 
 
-$lang['en']['main_title'] = 'Welcome message';
-$lang['es']['main_title'] = 'Bienvenido a la página principal';
+$lang['en']['page_title'] = 'Welcome to CMS77';
+$lang['es']['page_title'] = 'Bienvenido a CMS77';
+$page_title = t('page_title');
 
 require PATH_VIEWS.'welcome.php';

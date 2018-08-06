@@ -22,6 +22,7 @@ require PATH_LIBS.'database.php';
 // Determine current language
 if (!isset($_COOKIE['lang'])){
     $_COOKIE['lang'] = $config['lang'];
+    set_cookie('lang',$config['lang']);
 }
 
 // User select the current language
@@ -29,12 +30,15 @@ if (isset($_GET['lang'])){
     switch($_GET['lang']){
         case 'en':
             $_COOKIE['lang'] = 'en';
+            set_cookie('lang','en');
         break;
         case 'es':
             $_COOKIE['lang'] = 'es';
+            set_cookie('lang','es');
         break;
         default:
             $_COOKIE['lang'] = $config['lang'];
+            set_cookie('lang',$config['lang']);
     }
 }
 
